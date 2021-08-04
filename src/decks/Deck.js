@@ -134,23 +134,25 @@ const Deck = () => {
                   <div className="col">{card.front}</div>
                   <div className="col">{card.back}</div>
                 </div>
-                <div className="container row">
-                  <button
-                    onClick={() => handleEditCard(card)}
-                    className="btn btn-secondary mx-1"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDeleteCard(card)}
-                    className="btn btn-danger mx-1"
-                  >
-                    <span className="buttonText">Delete </span>
-                    <span className="buttonIcon">
-                      <ion-icon name="trash-outline"></ion-icon>
-                    </span>
-                  </button>
-                </div>
+                <>
+                  <div className="container row">
+                    <button
+                      onClick={() => handleEditCard(card)}
+                      className="btn btn-secondary mx-1"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDeleteCard(card)}
+                      className="btn btn-danger mx-2"
+                    >
+                      <span className="buttonText">Delete </span>
+                      <span className="buttonIcon">
+                        <ion-icon name="trash-outline"></ion-icon>
+                      </span>
+                    </button>
+                  </div>
+                </>
               </div>
             </div>
           </div>
