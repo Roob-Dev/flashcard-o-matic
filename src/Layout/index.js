@@ -15,13 +15,13 @@ function Layout() {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="container" >
         {/* TODO: Implement the screen starting here */}
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/decks/new">
+          <Route path="/decks/new" >
             <CreateDeck />
           </Route>
           <Route exact path="/decks/:deckId">

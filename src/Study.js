@@ -22,7 +22,7 @@ const Study = () => {
       };
     };
     fetchData();
-  }, []);
+  }, [deckId]);
 
   const nextCard = (index, total) => {
     console.log(index);
@@ -69,6 +69,7 @@ const Study = () => {
   const enoughCards = () => {
     return (
       <div className="card">
+        {/* map through the cards array */}
         {cards.map((card, index) => {
           if (index === cardNumber - 1) {
             return (
@@ -85,6 +86,8 @@ const Study = () => {
                 {showNextButton(cards, index)}
               </div>
             );
+          } else {
+            return null;
           }
         })}
       </div>
@@ -110,7 +113,7 @@ const Study = () => {
   };
 
   return (
-    <div>
+    <div className="col-mb-7">
       <ol className="breadcrumb">
         <li className="breadcrumb-item">
           <Link to="/">Home</Link>
@@ -122,7 +125,7 @@ const Study = () => {
       </ol>
       <div>
         <h2>{`${deck.name}: Study`}</h2>
-        <div>
+        <div className="shadow p-3 mb-5 bg-body rounded border border-dark">
           {cards.length === 0
             ? notEnoughCards()
             : cards.length > 2

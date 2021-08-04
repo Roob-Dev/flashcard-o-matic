@@ -26,7 +26,7 @@ const EditDeck = () => {
       };
     };
     fetchData();
-  }, []);
+  }, [deckId]);
 
   const handleChange = ({ target }) => {
     setDeck({
@@ -56,9 +56,10 @@ const EditDeck = () => {
         <li className="breadcrumb-item">
           <Link to={`/decks/${deckId}`}>{deck.name}</Link>
         </li>
-        <li className="breadcrumb-item active">Edit Deck</li>
+        <li className="breadcrumb-item active ">Edit Deck</li>
       </ol>
-      <form onSubmit={handleSubmit}>
+      <div className="card shadow p-3 mb-5 bg-body rounded border border-dark">
+      <form onSubmit={handleSubmit} className="">
         <h1>Edit Deck</h1>
         <div className="form-group">
           <label>Name</label>
@@ -69,6 +70,7 @@ const EditDeck = () => {
             onChange={handleChange}
             type="text"
             value={deck.name}
+            required
           />
         </div>
         <div className="form-group">
@@ -80,6 +82,7 @@ const EditDeck = () => {
             onChange={handleChange}
             type="text"
             value={deck.description}
+            required
           />
         </div>
         <button
@@ -92,6 +95,7 @@ const EditDeck = () => {
           Submit
         </button>
       </form>
+      </div>
     </div>
   );
 };

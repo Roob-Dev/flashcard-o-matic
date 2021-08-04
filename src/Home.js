@@ -39,13 +39,18 @@ const Home = () => {
       <div className="card-deck">
         {decks.map((deck) => {
           return (
-            <div className="card" style={{ width: "30rem" }} key={deck.id}>
+            <div
+              className="card shadow p-3 mb-5 bg-body rounded border border-dark"
+              style={{ width: "30rem" }}
+              key={deck.id}
+            >
               <div className="card-body">
                 <div className="card-title">{`${deck.name}`}</div>
                 <div className="card-subtitle mb-2 text-muted">
                   {`${deck.cards.length} cards`}
                 </div>
                 <div className="card-text">{`${deck.description}`}</div>
+                <br />
                 <Link
                   className="btn btn-secondary mx-1"
                   to={`/decks/${deck.id}`}
@@ -63,7 +68,10 @@ const Home = () => {
                   className="btn btn-danger mx-1"
                   onClick={() => handleDelete(deck)}
                 >
-                  Delete
+                  <span className="buttonText">Delete </span>
+                  <span className="buttonIcon">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </span>
                 </button>
               </div>
             </div>
