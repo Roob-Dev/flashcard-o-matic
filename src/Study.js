@@ -102,10 +102,7 @@ const Study = () => {
           You need at least 3 cards to study. There are {cards.length} cards in
           this deck.
         </p>
-        <Link
-          to={`/decks/${deck.id}/cards/new`}
-          className="btn btn-primary mx-1"
-        >
+        <Link to={`/decks/${deck.id}/cards/new`} className="btn btn-info mx-1">
           Add Cards
         </Link>
       </div>

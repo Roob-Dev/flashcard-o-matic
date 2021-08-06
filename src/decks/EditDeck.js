@@ -91,7 +91,7 @@ const EditDeck = () => {
         >
           Cancel
         </button>
-        <button className="btn btn-primary mx-1" type="submit">
+        <button className="btn btn-info mx-1" type="submit" >
           Submit
         </button>
       </form>

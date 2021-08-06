@@ -35,7 +35,7 @@ const Card = ({ card, handleDone, handleSubmit, handleChange, typeTitle }) => {
         <button className="btn btn-secondary mx-1" onClick={() => handleDone()}>
           {typeTitle === "Edit Card" ? "Cancel" : "Done"}
         </button>
-        <button className="btn btn-primary mx-1" type="submit">
+        <button className="btn btn-info mx-1" type="submit">
           {typeTitle === "Edit Card" ? "Submit" : "Save"}
         </button>
       </form>
